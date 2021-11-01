@@ -11,12 +11,12 @@ Nota: Se deben usar acumuladores para resolverlo.
 
         for (int i = 1; i < 11; i++) {
             acumuladorSuma = acumuladorSuma += i;
-            System.Console.WriteLine($"Acumulador suma: {acumuladorSuma}");
+            System.Console.WriteLine($"Acumulador suma: {acumuladorSuma}"); //No escribas en cada iteración el total, si no al final
         }
         System.Console.WriteLine("----------------------------------------------------");
         for (int i = 1; i < 11; i++) {
             acumuladorProducto = acumuladorProducto *= i;
-            System.Console.WriteLine($"Acumulador producto: {acumuladorProducto}");
+            System.Console.WriteLine($"Acumulador producto: {acumuladorProducto}"); //Igual
         }
     }
 */
@@ -30,7 +30,7 @@ Nota: Se deben usar contadores para resolverlo.
     static void Main(string[] args)
     {
         int numPositivos = 0;
-        int numNegativos = 0;
+        int numNegativos = 0; //Acostúmbrate a declarar las variables del mismo tipo preferiblemente en la misma instrucción. Ganarás claridad
 
         Random random = new Random();
         int numerosRand;
@@ -75,7 +75,7 @@ Nota: Se deben usar contadores y acumuladores para resolverlo.
             }
         } while (nota != 0);
         media = (numSuma / contador);
-        Console.WriteLine($"La media será: {media:F2}");
+        Console.WriteLine($"La media será: {media:F2}"); //Cuidado porque si el primer número introducido es un 0 el programa te produce una indeterminación. ¿Cómo solucionarías esto?
     }
 */
 #endregion
@@ -168,7 +168,7 @@ y muestra el mayor de la secuencia.
             if(numMayor < numerosRand) {
                 numMayor = numerosRand;
             } else if(numerosRand == 0) {
-                i = 100;
+                i = 100; //Esto es una práctica peligrosa, mejor usar una bandera
                 System.Console.WriteLine("Salió el 0 con lo cual se paró el programa");
             }
             System.Console.WriteLine($"Contador de numeros: {numerosRand}");
@@ -225,7 +225,7 @@ restas.
             resto = numero1-numero2;
             numero1 = resto;
             cociente = cociente + 1;
-            resultado=$"El resto de la division es {resto}, el cociente es {cociente}";
+            resultado=$"El resto de la division es {resto}, el cociente es {cociente}"; //Mejor ponerlo fuera del bucle, dentro no tiene mucho sentido
         }
         while (numero1>=numero2);
         Console.WriteLine(resultado);
@@ -317,7 +317,7 @@ Saldrá del programa con la tecla ESC, para ello se podrá usar Console.ReadKey(
         ConsoleKeyInfo tecla;
         int estados = 0, resultado = 0;
         
-        do {
+        do { //Este ejercicio invita a un switch-case
             if(estados == 0) {
                 System.Console.WriteLine("Selecciona si quieres sumar(1), restar(2), multiplicar(3) o dividir(4): ");
                 try {
