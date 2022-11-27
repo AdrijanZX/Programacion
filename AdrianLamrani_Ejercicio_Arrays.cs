@@ -128,7 +128,7 @@ class Program {
         int upperValue = 0;
         for(int i = 0; i < array.Length; i++) {
             System.Console.Write($"Introduce el valor que irá en la posición nº {i + 1}: ");
-            array[i] = int.Parse(Console.ReadLine());
+            array[i] = int.Parse(Console.ReadLine()); /*El enunciado te indica números aleatorios*/
             mensaje += $"{array[i]}, ";
         }
         System.Console.WriteLine("Tenemos dentro del array los valores: " + mensaje);
@@ -224,7 +224,7 @@ class Program {
                              $"Entrar:\n\n" +
                              $"     Introduce la contraseña: ");
         char[] contraseña = Console.ReadLine().ToCharArray();
-        if(contraseña.SequenceEqual(contraseñaN)) {
+        if(contraseña.SequenceEqual(contraseñaN)) { /*Debes comprobar carácter a carácter*/
             System.Console.WriteLine("      La contraseña es correcta.");
         } else {
             System.Console.WriteLine("      La contraseña es incorrecta.");
@@ -239,10 +239,10 @@ class Program {
                              $"     Contraseña: ");
         string contraseña = Console.ReadLine();
         System.Console.Write($"     Comprobar contraseña: ");
-        string repiteContraseña = Console.ReadLine();
+        string repiteContraseña = Console.ReadLine(); /*Tienes que ir sustituyendo por * cada carácter*/
         System.Console.WriteLine($"\n----------------------------------------");
 
-        if(contraseña.Length <= 20 && contraseña == repiteContraseña) {
+        if(contraseña.Length <= 20 && contraseña == repiteContraseña) { 
             return contraseña.ToCharArray();
         } else {
             return null;
@@ -275,7 +275,7 @@ class Program {
         for(int i = 0; i < notas.Length; i++) {
             contador = 0;
             for(int j = 0; j < notas.Length; j++) {
-                if(i == (int)notas[j])
+                if(i == (int)notas[j]) /*Este cast?? Pero si ya es int*/
                     contador++;
             }
             mensaje += $"[{contador}] ";
