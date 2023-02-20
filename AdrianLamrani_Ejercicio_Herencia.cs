@@ -841,7 +841,7 @@ abstract class TablaEnteros {
     public TablaEnteros(int tamaño) {
         Tabla = new int[tamaño];
     }
-    public virtual void MostrarTabla() {
+    public virtual void MostrarTabla() { /*virtual??*/
         for(int i = 0; i < Tabla.Length; i++) {
             System.Console.Write(Tabla[i] + " ");
         }
